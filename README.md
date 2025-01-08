@@ -45,7 +45,7 @@ O **Nearby** é um aplicativo inovador que conecta usuários a estabelecimentos 
 
 ## Como Configurar o Projeto
 
-### Back end
+### Backend
 1. Navegue para a pasta `api`.
 2. Instale as dependências:
    ```bash
@@ -57,7 +57,7 @@ O **Nearby** é um aplicativo inovador que conecta usuários a estabelecimentos 
    npm run dev
    ```
 
-### Front end
+### Frontend
 1. Navegue para a pasta `mobile`.
 2. Instale as dependências:
    ```bash
