@@ -79,6 +79,6 @@ O desenvolvimento do Nearby demonstra habilidades em:
 - **Aprendizado Contínuo:** Adaptação a novas tecnologias e boas práticas do mercado.
 
 ---
-
+ 
 ## Contato
 Linkedin: https://www.linkedin.com/in/miguel-rafael/
