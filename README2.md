@@ -81,3 +81,4 @@ O desenvolvimento do Nearby demonstra habilidades em:
 ---
 
 ## Contato
+Linkedin: https://www.linkedin.com/in/miguel-rafael/
