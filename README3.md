@@ -12,9 +12,11 @@ Este projeto é um aplicativo mobile desenvolvido com React Native, que permite 
 
 ### Como rodar a aplicação:
 1. Na pasta "**api**"
-2. Execute o comando no terminal: "**npm run start**"
-3. Acesse a pasta "**mobile**"
-4. Execute o comando no terminal: "**npx expo start**"
+2. Execute o comando no terminal: "**npm install**"
+3. Execute o comando no terminal: "**npm run start**"
+4. Acesse a pasta "**mobile**"
+5. Execute o comando no terminal: "**npm install expo**"
+6. Execute o comando no terminal: "**npx expo start**"
 
 Pronto! Aplicação rodando com sucesso.
 
