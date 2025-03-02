@@ -11,7 +11,6 @@ O **Nearby** é um aplicativo inovador que conecta usuários a estabelecimentos 
 - **Busca Inteligente de Estabelecimentos:** Localização baseada em geolocalização para facilitar o acesso a parceiros próximos.
 - **Ativação de Cupons em Tempo Real:** Simplicidade para desbloquear descontos exclusivos.
 - **Histórico de Benefícios:** Registra os cupons utilizados para acompanhamento e controle.
-- **Notificações Personalizadas:** Alertas relevantes sobre promoções e novidades.
 - **Interface Intuitiva:** Desenvolvida com foco na experiência do usuário.
 
 ---
