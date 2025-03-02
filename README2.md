@@ -74,8 +74,7 @@ O **Nearby** é um aplicativo inovador que conecta usuários a estabelecimentos 
 
 O desenvolvimento do Nearby demonstra habilidades em:
 - **Desenvolvimento Full Stack:** Criação de aplicações completas, do backend ao frontend.
-- **Gerenciamento de Projetos:** Capacidade de estruturar e liderar projetos complexos.
-- **Trabalho em Equipe:** Colaboração com outros profissionais para entrega de soluções de alta qualidade.
+- **Gerenciamento de Projetos:** Capacidade de estruturar.
 - **Aprendizado Contínuo:** Adaptação a novas tecnologias e boas práticas do mercado.
 
 ---
