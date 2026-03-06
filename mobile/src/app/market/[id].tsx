@@ -67,6 +67,8 @@ async function getCoupon(id: string){
 
         Alert.alert("Cupom", data.coupon)
         setCoupon(data.coupon)
+
+        await fetchMarket()
     } catch (error) {
         console.log(error)
         Alert.alert("Erro", "Não foi possivel ultilizar o cupom")
@@ -87,7 +89,7 @@ function handleUseCoupon(id: string){ //apagaaaaa
 
 useEffect(() => {
     fetchMarket()
-},[params.id, coupon])
+},[params.id])
 
 
 if(isLoading){

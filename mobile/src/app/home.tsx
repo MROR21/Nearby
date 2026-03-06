@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { View, Alert, Text } from "react-native";
 import MapView, { Callout, Marker } from "react-native-maps";
 import * as Location from 'expo-location';
-import { router, Router } from "expo-router";
+import { router, useFocusEffect } from "expo-router";
 
 
 import{api} from "@/services/api"
@@ -80,6 +80,13 @@ useEffect(() => {
 
 }, [category])
 
+useFocusEffect(
+        useCallback(() => {
+            if(category) {
+                fetchMarkets()
+            }
+        }, [category])
+    )
 
     return(
     <View style={{flex: 1, backgroundColor: "#CECECE"}}>
