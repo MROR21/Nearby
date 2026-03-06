@@ -47,7 +47,7 @@ O **Nearby** é um aplicativo inovador que conecta usuários a estabelecimentos 
 2. Execute o comando no terminal: "**npm install**"
 3. Execute o comando no terminal: "**npm run start**"
 4. Acesse a pasta "**mobile**"
-5. Execute o comando no terminal: "**npm install expo**"
+5. Execute o comando no terminal: "**npm install**"
 6. Execute o comando no terminal: "**npx expo start**"
 
 Pronto! Aplicação rodando com sucesso.
