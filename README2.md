@@ -47,8 +47,13 @@ O **Nearby** é um aplicativo inovador que conecta usuários a estabelecimentos 
 2. Execute o comando no terminal: "**npm install**"
 3. Execute o comando no terminal: "**npm run start**"
 4. Acesse a pasta "**mobile**"
-5. Execute o comando no terminal: "**npm install**"
-6. Execute o comando no terminal: "**npx expo start**"
+5. Dentro de src entre na pasta Services e no arquivo "api.ts" mude o endereço de IP para o do seu computador
+6. Para descobrir o ip so seu computador:
+   - Abra o cmd e digite "**ipconfig**"
+   - O ip da sua maquina estara sessão "Adaptador de Rede Sem Fio" na linha "Enderço IPv4"
+8. Execute o comando no terminal: "**npm install**"
+9. Execute o comando no terminal: "**npx expo start**"
+10. 
 
 Pronto! Aplicação rodando com sucesso.
 
