@@ -20,9 +20,4 @@ O aplicativo Nearby foi desenvolvido utilizando as seguintes tecnologias:
 ![Layout](.github/Thumbnail.png)
 Link do [Figma](https://www.figma.com/community/file/1448070647757721748)
 
-## Projeto
-
->Esse é o projeto do evento NLW Pocket Mobile, um dos conteúdos disponíveis para alunos da Rocketseat. Desenvolvido na semana de 09 à 12 de Dezembro de 2024
-
-➡️ Conheça a [Rocketseat](https://www.rocketseat.com.br/)
 

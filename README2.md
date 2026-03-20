@@ -61,22 +61,3 @@ Pronto! Aplicação rodando com sucesso.
 ![Captura de tela 2024-12-16 125842](https://github.com/user-attachments/assets/5d8acccc-2b76-44a7-bafb-f4d2c2d7520e)
 ![Captura de tela 2024-12-16 125925](https://github.com/user-attachments/assets/e536935b-fb7f-43a5-acee-e7db869c094d)
 
----
-
-## Objetivos Profissionais
-
-O desenvolvimento do Nearby demonstra habilidades em:
-- **Desenvolvimento Full Stack:** Criação de aplicações completas, do backend ao frontend.
-- **Gerenciamento de Projetos:** Capacidade de estruturar.
-- **Aprendizado Contínuo:** Adaptação a novas tecnologias e boas práticas do mercado.
-
----
- 
-## Contato
-Linkedin: https://www.linkedin.com/in/miguel-rafael/
-
-
----
- 
-## Contato
-Linkedin: https://www.linkedin.com/in/miguel-rafael/
