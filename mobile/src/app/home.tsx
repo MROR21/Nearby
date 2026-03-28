@@ -26,16 +26,25 @@ export default function Home(){
 const [categories, setCategories] = useState<CategoriesProps>([])
 const [category, setCategory] = useState("")
 const [markets, setMarkets] = useState<MarketProps[]>([])
+const [loading, setLoading] = useState(false)
+const [error, setError] = useState<string | null>(null)
 
 
 async function fetchCategories(){
+    setLoading(true)
+    setError(null)
     try {
       const {data} = await api.get("/categories")
        setCategories(data)
-       setCategory(data[0].id)
+       if(data && data.length > 0) {
+           setCategory(data[0].id)
+       }
     } catch (error){
-      console.log(error)
+      console.error("Erro ao buscar categorias:", error)
+      setError("Falha ao carregar categorias")
       Alert.alert("Categorias", "Não foi possivel carregar as categorias. ")
+    } finally {
+        setLoading(false)
     }
 }
 
@@ -90,6 +99,18 @@ useFocusEffect(
 
     return(
     <View style={{flex: 1, backgroundColor: "#CECECE"}}>
+      {loading && (
+        <View style={{position: 'absolute', top: 50, left: 0, right: 0, zIndex: 1}}>
+          <Text style={{textAlign: 'center', color: colors.green.base}}>Carregando...</Text>
+        </View>
+      )}
+      
+      {error && (
+        <View style={{position: 'absolute', top: 80, left: 20, right: 20, zIndex: 1}}>
+          <Text style={{textAlign: 'center', color: 'red'}}>{error}</Text>
+        </View>
+      )}
+      
       <Categories 
       data={categories} 
       onSelect={setCategory} 

@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "tsx watch src/server.ts",
+    "build": "tsc",
     "knex": "node --import tsx ./node_modules/.bin/knex"
   },
   "prisma": {
@@ -14,6 +15,7 @@
   "description": "API do App Nearby da NLW Pocket Mobile",
   "dependencies": {
     "@prisma/client": "^5.21.0",
+    "@vercel/node": "^3.0.0",
     "express": "^4.19.2",
     "zod": "^3.23.8"
   },
