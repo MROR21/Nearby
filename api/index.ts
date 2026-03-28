@@ -28,15 +28,31 @@ app.get('/categories', (req, res) => {
 // Test endpoint Supabase (se funcionar, está conectado)
 app.get('/test-supabase', async (req, res) => {
   try {
-    // Tentar conectar ao Supabase
+    // Tentar conectar com chave pública (sem auth)
     const response = await fetch('https://db.wqxqinkmgldmzhtwtryh.supabase.co/rest/v1/categories', {
       headers: {
         'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind3cXppbmttZ2xkemh0dHJ5aCIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzE0NDI2MjQzLCJleHAiOjIwMzAwMDIyNDN9.5JqLK7GmP1Q2zLqTJ3qY2pX7Z8J9T8Y2Z1X7W8J9T8Y',
         'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind3cXppbmttZ2xkemh0dHJ5aCIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzE0NDI2MjQzLCJleHAiOjIwMzAwMDIyNDN9.5JqLK7GmP1Q2zLqTJ3qY2pX7Z8J9T8Y2Z1X7W8J9T8Y'
       }
     })
-    const data = response.json() // ← Removido await!
+    const data = await response.json()
     res.json({ source: 'supabase', data })
+  } catch (error: any) {
+    res.json({ source: 'error', error: error.message || 'Unknown error' })
+  }
+})
+
+// Teste sem autenticação (chave pública)
+app.get('/test-public', async (req, res) => {
+  try {
+    // Tentar com apenas apikey (sem Bearer)
+    const response = await fetch('https://db.wqxqinkmgldmzhtwtryh.supabase.co/rest/v1/categories', {
+      headers: {
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind3cXppbmttZ2xkemh0dHJ5aCIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzE0NDI2MjQzLCJleHAiOjIwMzAwMDIyNDN9.5JqLK7GmP1Q2zLqTJ3qY2pX7Z8J9T8Y2Z1X7W8J9T8Y'
+      }
+    })
+    const data = await response.json()
+    res.json({ source: 'public', data })
   } catch (error: any) {
     res.json({ source: 'error', error: error.message || 'Unknown error' })
   }
