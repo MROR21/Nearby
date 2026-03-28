@@ -4,7 +4,7 @@ const getBaseURL = () => {
     if (__DEV__) {
         return "http://192.168.15.177:3333";
     }
-    return "https://sua-api-producao.com"; // Substitua com sua URL de produção
+    return "https://nearby-5o2p1zn6o-mror21s-projects.vercel.app/";
 };
 
 export const api = axios.create({
