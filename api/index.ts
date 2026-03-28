@@ -35,10 +35,10 @@ app.get('/test-supabase', async (req, res) => {
         'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind3cXppbmttZ2xkemh0dHJ5aCIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzE0NDI2MjQzLCJleHAiOjIwMzAwMDIyNDN9.5JqLK7GmP1Q2zLqTJ3qY2pX7Z8J9T8Y2Z1X7W8J9T8Y'
       }
     })
-    const data = await response.json()
+    const data = response.json() // ← Removido await!
     res.json({ source: 'supabase', data })
-  } catch (error) {
-    res.json({ source: 'error', error: error.message })
+  } catch (error: any) {
+    res.json({ source: 'error', error: error.message || 'Unknown error' })
   }
 })
 
