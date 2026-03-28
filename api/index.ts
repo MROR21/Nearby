@@ -72,8 +72,8 @@ app.get('/test-supabase', async (req, res) => {
     // Tentar conectar com chave pública (sem auth)
     const response = await fetch('https://db.wqxqinkmgldmzhtwtryh.supabase.co/rest/v1/categories', {
       headers: {
-        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind3cXppbmttZ2xkemh0dHJ5aCIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzE0NDI2MjQzLCJleHAiOjIwMzAwMDIyNDN9.5JqLK7GmP1Q2zLqTJ3qY2pX7Z8J9T8Y2Z1X7W8J9T8Y',
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind3cXppbmttZ2xkemh0dHJ5aCIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzE0NDI2MjQzLCJleHAiOjIwMzAwMDIyNDN9.5JqLK7GmP1Q2zLqTJ3qY2pX7Z8J9T8Y2Z1X7W8J9T8Y'
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndxeHFpbmttZ2xkbXpodHd0cnloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3MjI0MjAsImV4cCI6MjA5MDI5ODQyMH0.b1x1iejz4gCrRTXN7dYHGXX0FWqsPbXrCfP6KY2Ws1k',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndxeHFpbmttZ2xkbXpodHd0cnloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3MjI0MjAsImV4cCI6MjA5MDI5ODQyMH0.b1x1iejz4gCrRTXN7dYHGXX0FWqsPbXrCfP6KY2Ws1k'
       }
     })
     const data = await response.json()
@@ -89,7 +89,7 @@ app.get('/test-public', async (req, res) => {
     // Tentar com apenas apikey (sem Bearer)
     const response = await fetch('https://db.wqxqinkmgldmzhtwtryh.supabase.co/rest/v1/categories', {
       headers: {
-        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind3cXppbmttZ2xkemh0dHJ5aCIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzE0NDI2MjQzLCJleHAiOjIwMzAwMDIyNDN9.5JqLK7GmP1Q2zLqTJ3qY2pX7Z8J9T8Y2Z1X7W8J9T8Y'
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndxeHFpbmttZ2xkbXpodHd0cnloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3MjI0MjAsImV4cCI6MjA5MDI5ODQyMH0.b1x1iejz4gCrRTXN7dYHGXX0FWqsPbXrCfP6KY2Ws1k'
       }
     })
     const data = await response.json()
