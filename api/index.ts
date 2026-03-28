@@ -12,13 +12,23 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() })
 })
 
+// Debug endpoint para verificar environment
+app.get('/debug-env', (req, res) => {
+  res.json({ 
+    database_url: process.env.DATABASE_URL ? 'SET' : 'NOT_SET',
+    node_env: process.env.NODE_ENV,
+    has_prisma: !!require('@prisma/client')
+  })
+})
+
 // Importar rotas (agora vai funcionar!)
 try {
   const { routes } = require('./src/routes')
   app.use(routes)
   console.log('Rotas carregadas com sucesso!')
-} catch (error) {
+} catch (error: any) {
   console.error('Error loading routes:', error)
+  // Não usar res aqui, só logar erro
 }
 
 // Handler para Vercel
