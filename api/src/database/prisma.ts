@@ -1,5 +1,8 @@
 import { PrismaClient } from "@prisma/client"
 
-export const prisma = new PrismaClient({
+// Gerar Prisma Client para evitar cache do Vercel
+const prisma = new PrismaClient({
   log: ["query"],
 })
+
+export { prisma }
