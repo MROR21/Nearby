@@ -47,6 +47,23 @@ app.get('/test-url', async (req, res) => {
   }
 })
 
+// Teste URL base do projeto
+app.get('/test-project', async (req, res) => {
+  try {
+    // Testar URL base do projeto
+    const response = await fetch('https://wqxqinkmgldmzhtwtryh.supabase.co/rest/v1/categories', {
+      headers: {
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndxeHFpbmttZ2xkbXpodHd0cnloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3MjI0MjAsImV4cCI6MjA5MDI5ODQyMH0.b1x1iejz4gCrRTXN7dYHGXX0FWqsPbXrCfP6KY2Ws1k',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndxeHFpbmttZ2xkbXpodHd0cnloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3MjI0MjAsImV4cCI6MjA5MDI5ODQyMH0.b1x1iejz4gCrRTXN7dYHGXX0FWqsPbXrCfP6KY2Ws1k'
+      }
+    })
+    const data = await response.json()
+    res.json({ source: 'project-url', data })
+  } catch (error: any) {
+    res.json({ source: 'project-error', error: error.message || 'Unknown error' })
+  }
+})
+
 // Test endpoint com chave correta
 app.get('/test-correct-key', async (req, res) => {
   try {
