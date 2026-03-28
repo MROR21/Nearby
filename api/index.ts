@@ -21,6 +21,35 @@ app.get('/debug-env', (req, res) => {
   })
 })
 
+// Debug Prisma connection
+app.get('/debug-prisma', async (req, res) => {
+  try {
+    const { PrismaClient } = require('@prisma/client')
+    const prisma = new PrismaClient()
+    
+    // Testar conexão
+    await prisma.$connect()
+    console.log('Prisma conectado com sucesso!')
+    
+    // Contar categories
+    const count = await prisma.category.count()
+    const categories = await prisma.category.findMany({ take: 3 })
+    
+    await prisma.$disconnect()
+    
+    res.json({ 
+      connection: 'SUCCESS',
+      count: count,
+      sample: categories
+    })
+  } catch (error: any) {
+    res.json({ 
+      connection: 'FAILED',
+      error: error.message 
+    })
+  }
+})
+
 // Importar rotas (agora vai funcionar!)
 try {
   const { routes } = require('./src/routes')
