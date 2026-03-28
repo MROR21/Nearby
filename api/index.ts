@@ -25,6 +25,47 @@ app.get('/categories', (req, res) => {
   res.json(categories)
 })
 
+// Teste básico da URL do Supabase
+app.get('/test-url', async (req, res) => {
+  try {
+    // Testar se a URL responde
+    const response = await fetch('https://db.wqxqinkmgldmzhtwtryh.supabase.co/rest/v1/', {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    const result = await response.text()
+    res.json({ 
+      source: 'url-test', 
+      status: response.status,
+      ok: response.ok,
+      result: result.substring(0, 200) // Primeiros 200 chars
+    })
+  } catch (error: any) {
+    res.json({ source: 'url-error', error: error.message || 'Unknown error' })
+  }
+})
+
+// Test endpoint com chave correta
+app.get('/test-correct-key', async (req, res) => {
+  try {
+    // COLOQUE A CHAVE CORRETA AQUI:
+    const correctKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndxeHFpbmttZ2xkbXpodHd0cnloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3MjI0MjAsImV4cCI6MjA5MDI5ODQyMH0.b1x1iejz4gCrRTXN7dYHGXX0FWqsPbXrCfP6KY2Ws1k"
+    
+    const response = await fetch('https://db.wqxqinkmgldmzhtwtryh.supabase.co/rest/v1/categories', {
+      headers: {
+        'apikey': correctKey,
+        'Authorization': `Bearer ${correctKey}`
+      }
+    })
+    const data = await response.json()
+    res.json({ source: 'correct-key', data })
+  } catch (error: any) {
+    res.json({ source: 'key-error', error: error.message || 'Unknown error' })
+  }
+})
+
 // Test endpoint Supabase (se funcionar, está conectado)
 app.get('/test-supabase', async (req, res) => {
   try {
