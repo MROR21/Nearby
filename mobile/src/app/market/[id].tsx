@@ -120,12 +120,12 @@ if(!data){
             <CameraView 
             style={{flex: 1}}
             facing="back"
-            onBarcodeScanned={({data}) => {
-                if(data && !qrLock.current){
-                  qrLock.current = true
-                  setTimeout(() => handleUseCoupon(data), 500)  //console.log(data)
-                }
-            }}
+            onBarcodeScanned={({ data }) => {
+                if (data && !qrLock.current) {
+                    qrLock.current = true
+                    setTimeout(() => handleUseCoupon(params.id), 500) 
+             }
+        }}
             />
 
             <View style={{position: "absolute", bottom: 32, left: 32, right: 32}}>
