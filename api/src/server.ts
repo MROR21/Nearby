@@ -11,8 +11,12 @@ app.use(routes)
 
 app.use(errorHandling)
 
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(PORT, () => console.log(`Server is running on port ${PORT}`))
-}
+// No final do seu server.ts, apague o if e coloque assim:
+
+const port = process.env.PORT || 3333;
+
+app.listen(port, () => {
+  console.log(`🚀 Server is running on port ${port}`);
+});
 
 export default app
