@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express"
-import { prisma } from "@/database/prisma"
+import { prisma } from "../database/prisma"
 import { z } from "zod"
 
 class MarketsController {

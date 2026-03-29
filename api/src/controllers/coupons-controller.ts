@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express"
-import { prisma } from "@/database/prisma"
-import { AppError } from "@/utils/AppError"
+import { prisma } from "../database/prisma"
+import { AppError } from "../utils/AppError"
 import crypto from "node:crypto"
 import { z } from "zod"
 
