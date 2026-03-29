@@ -27,7 +27,12 @@
         "android.permission.ACCESS_FINE_LOCATION",
         "android.permission.ACCESS_COARSE_LOCATION",
         "android.permission.INTERNET"
-      ]
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyC-YgBAB0pOtO5thD0whv1Cam2XX2tmmyU"
+        }
+      }
     },
     "web": {
       "bundler": "metro",
