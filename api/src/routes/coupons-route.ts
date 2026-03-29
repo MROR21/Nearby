@@ -1,6 +1,6 @@
 import { Router } from "express"
 
-import { CouponsController } from "@/controllers/coupons-controller"
+import { CouponsController } from "../controllers/coupons-controller"
 
 const couponsRoutes = Router()
 const couponsController = new CouponsController()
