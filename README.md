@@ -16,8 +16,5 @@ O aplicativo Nearby foi desenvolvido utilizando as seguintes tecnologias:
 
 **Nearby** é um aplicativo mobile de clube de benefícios com cupons para utilizar em estabelecimentos próximos a você.
 
-### Layout
-![Layout](.github/Thumbnail.png)
-Link do [Figma](https://www.figma.com/community/file/1448070647757721748)
 
 
