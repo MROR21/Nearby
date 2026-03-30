@@ -46,7 +46,7 @@ O **Nearby** é um aplicativo inovador que conecta usuários a estabelecimentos 
 
 ### Como rodar a aplicação:
 1. Clone este repositório:
-   git clone [[https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/MROR21/Nearby.git)]
+   git clone [[https://github.com/MROR21/Nearby.git](https://github.com/MROR21/Nearby.git)]
    
 2. Na pasta "**mobile**"
 3. Execute o comando no terminal: "**npm install**"
