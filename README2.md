@@ -1,5 +1,7 @@
 # Nearby - Clube de Benefícios
 
+![Nearby](.github/logoNearby.png)
+
 ## Sobre o Projeto
 
 O **Nearby** é um aplicativo inovador que conecta usuários a estabelecimentos parceiros próximos, oferecendo uma experiência única de descoberta de cupons exclusivos e vantagens personalizadas. O projeto combina tecnologia de ponta e design intuitivo, sendo ideal para quem busca comodidade e economia no dia a dia.
