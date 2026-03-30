@@ -4,15 +4,15 @@
 
 ## Sobre o Projeto
 
-O **Nearby** é um aplicativo inovador que conecta usuários a estabelecimentos parceiros próximos, oferecendo uma experiência única de descoberta de cupons exclusivos e vantagens personalizadas. O projeto combina tecnologia de ponta e design intuitivo, sendo ideal para quem busca comodidade e economia no dia a dia.
+O **Nearby** é uma plataforma de clube de benefícios que utiliza geolocalização para conectar usuários a estabelecimentos parceiros em tempo real. O aplicativo permite a visualização de locais próximos no mapa, filtrados por categorias, e oferece um sistema prático de resgate de cupons via QR Code. Desenvolvido com foco em performance e fidelidade visual, o projeto utiliza componentes nativos para garantir a melhor experiência em dispositivos iOS e Android.
 
 ---
 
 ## Principais Características
 
 - **Busca Inteligente de Estabelecimentos:** Localização baseada em geolocalização para facilitar o acesso a parceiros próximos.
-- **Ativação de Cupons em Tempo Real:** Simplicidade para desbloquear descontos exclusivos.
-- **Histórico de Benefícios:** Registra os cupons utilizados para acompanhamento e controle.
+- **Resgate de Cupons via QR Code:** Simplicidade para desbloquear descontos exclusivos.
+- **Filtro por Categorias:** Navegação fluida para encontrar exatamente o tipo de benefício desejado.
 - **Interface Intuitiva:** Desenvolvida com foco na experiência do usuário.
 
 ---
@@ -21,7 +21,8 @@ O **Nearby** é um aplicativo inovador que conecta usuários a estabelecimentos 
 
 ### Backend
 - **Linguagem:** Node.js com TypeScript.
-- **Banco de Dados:** Prisma ORM (compatível com PostgreSQL, MySQL e SQLite).
+- **Banco de Dados:** PostgreSQL hospedado em nuvem pelo **Supabase** (gerenciado com Prisma ORM).
+- **Hospedagem (Deploy):** API hospedada e em produção no **Railway**.
 - **Principais Ferramentas:**
   - Express.js para estrutura do servidor.
   - Prisma para gerenciamento e modelagem de banco de dados.
@@ -53,5 +54,9 @@ O **Nearby** é um aplicativo inovador que conecta usuários a estabelecimentos 
 4. Execute o comando no terminal: "**npx expo start**"
 
 Pronto! Agora é só escanear o QR Code no seu celular usando o app Expo Go (iOS/Android) ou rodar em um emulador.
+
+Como o backend e o banco de dados estão hospedados em instâncias gratuitas na nuvem (Railway e Supabase), **a primeira requisição pode demorar alguns segundos** 
+para carregar os dados. Se a tela de carregamento demorar um pouco na primeira vez que você abrir o app, não se preocupe, 
+é o servidor "acordando"!
 
 
