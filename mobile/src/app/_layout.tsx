@@ -31,7 +31,7 @@ export default function Layout(){
         <Stack
           screenOptions={{
              headerShown: false,
-             contentStyle: {backgroundColor: colors.green.soft },
+             contentStyle: {backgroundColor: colors.gray[100] },
              }}
         />
         </GestureHandlerRootView>
